@@ -3,6 +3,7 @@ package com.dql.product.day11;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,8 +11,9 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
+@RequestMapping("null")
 @Slf4j
-public class NullTest {
+public class NullTestController {
 
     private List<String> wrongMethod(FooService fooService, Integer i, String s, String t) {
         log.info("result {} {} {} {}", i + 1, s.equals("OK"), s.equals(t),

@@ -1,2 +1,18 @@
 server:
   port: 8088
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://119.45.222.11:3306/dql?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+    username: root
+    password: root
+    platform: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
