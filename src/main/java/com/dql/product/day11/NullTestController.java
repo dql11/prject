@@ -15,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class NullTestController {
 
+
     private List<String> wrongMethod(FooService fooService, Integer i, String s, String t) {
         log.info("result {} {} {} {}", i + 1, s.equals("OK"), s.equals(t),
                 new ConcurrentHashMap<String, String>().put(null, null));
@@ -61,5 +62,11 @@ public class NullTestController {
         String bar() {
             return "OK";
         }
+    }
+
+
+    public static void main(String[] args) {
+        int age = 20;
+        System.out.println(String.format("my age is %d", age));
     }
 }
